@@ -1,5 +1,5 @@
 variable "bucket" {
-  description = "k8s-iac-tfstate-435563"
+    default = "k8s-iac-tfstate-435563"
 }
 variable "proxmox_host" {
     default = "192.168.0.100"
@@ -44,6 +44,18 @@ variable "virtual_machines" {
             cpu_cores = 1,
             cpu_sockets = 1,
             memory = "2048",
+            hdd_size = "15G",
+            vm_template = "ubuntu-cloud-init",
+        },
+         "dns-node" = {
+            hostname = "dns"
+            ip_address = "192.168.0.15/24"
+            gateway = "192.168.0.1",
+            vlan_tag = 100,
+            target_node = "pve",
+            cpu_cores = 1,
+            cpu_sockets = 1,
+            memory = "1024",
             hdd_size = "15G",
             vm_template = "ubuntu-cloud-init",
         },
