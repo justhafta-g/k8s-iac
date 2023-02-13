@@ -46,6 +46,18 @@ variable "virtual_machines" {
             memory = "2048",
             hdd_size = "15G",
             vm_template = "ubuntu-cloud-init",
+         },
+        "k8s-ingress-node" = {
+            hostname = "ingress-node"
+            ip_address = "192.168.0.100/24"
+            gateway = "192.168.0.1",
+            vlan_tag = 100,
+            target_node = "pve",
+            cpu_cores = 1,
+            cpu_sockets = 1,
+            memory = "1024",
+            hdd_size = "15G",
+            vm_template = "ubuntu-cloud-init",
         },
          "dns-node" = {
             hostname = "dns"
