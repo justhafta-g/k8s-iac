@@ -50,7 +50,7 @@ resource "proxmox_vm_qemu" "virtual_machines" {
 
     # Cloud-init config
     ipconfig0 = "ip=${each.value.ip_address},gw=${each.value.gateway}"
-    #sshkeys = var.ssh_key - require uncoment ssh_key variable in vars.tf
+    #sshkeys = var.ssh_key - requires uncoment ssh_key variable in vars.tf
 }
 
 output "vm_ipv4_addresses" {
