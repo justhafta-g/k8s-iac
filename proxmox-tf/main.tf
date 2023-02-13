@@ -1,3 +1,4 @@
+#Deploy VMs
 provider "proxmox" {
     pm_api_url = "https://${var.proxmox_host}:8006/api2/json"
     pm_tls_insecure = true
@@ -11,7 +12,6 @@ provider "proxmox" {
     # _capturelog = ""
     # }
 }
-
 resource "proxmox_vm_qemu" "virtual_machines" {
     for_each = var.virtual_machines
 

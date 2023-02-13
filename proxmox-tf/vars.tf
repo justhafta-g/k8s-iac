@@ -1,3 +1,6 @@
+variable "bucket" {
+  description = "k8s-iac-tfstate-435563"
+}
 variable "proxmox_host" {
     default = "192.168.0.100"
 }
