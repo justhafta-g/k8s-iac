@@ -1,4 +1,6 @@
 #Create a bucket to store tfstate
+#Comment backend section before first run, 
+#uncomment when s3 bucket created and run terraform init one more time
 terraform {
   backend "s3" {
     bucket = "k8s-iac-tfstate-435563"
